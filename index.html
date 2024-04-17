@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <input type="number" id="bill" name="bill" placeholder="Enter your bill amount">
+     <button> Calculate Tip</button>
+     <div class="output">
+
+     </div>
+
+     <script>
+            let bill_box = document.querySelector('#bill');
+            let btn = document.querySelector('button');
+            let output = document.querySelector('.output');
+
+            // events: click, mouseover, mouseout, keyup, keydown, keypress
+
+            // addEventListener
+
+            btn.addEventListener("click", calculateTip)
+
+
+            function calculateTip(){
+            //    console.log('Button clicked');
+              let amount = bill_box.value;
+            //   console.log(amount);
+               let tip = amount *2/100
+            //    console.log("Your Tip shound be Rupees",tip);
+               output.innerText = `
+                Your Tip should be Rupees ${tip}
+               `
+            }
+
+     </script>
+</body>
+</html>
